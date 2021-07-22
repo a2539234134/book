@@ -8,13 +8,22 @@
     <!-- 引入压缩版的图标字体库 -->
     <link rel="stylesheet" href="./fontawesome-free-5.15.2-web/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- 
+        成果：https://a2539234134.github.io/books/index.html
+        代码：https://github.com/a2539234134/books/tree/master
+     -->
 </head>
 <body>
     <!-- 创建头部容器 -->
     <header class="top-bar">
         <div class="menu-btn">
             <a href="#">
-                <i class="fa fa-stream"></i>
+                <i class="fa fa-stream" id="menu"></i>
+                <div class="none-wrapper" id="nonew">
+                    <div class="tabBar-nonew">
+                        <span class="span-h2">便捷中心</span>
+                    </div>
+                </div>
             </a>
         </div>
         <h1 class="logo">
@@ -310,5 +319,6 @@
             </div>
         </div>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>

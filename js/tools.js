@@ -14,6 +14,14 @@ function removeClass(obj,cn){
     obj.className = obj.className.replace(reg,"");
 }
 
+function removeClass2(obj,cn){
+    if(hasClass(obj,cn)){
+        var reg = new RegExp("\\b"+cn+"\\b");
+        obj.className = obj.className.replace(reg,"");
+    }
+    
+}
+
 function toggleClass(obj,cn){
     if(hasClass(obj,cn)){
         removeClass(obj,cn);

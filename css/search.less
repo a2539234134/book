@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@total-width : 750px;
+
+html{
+  font-size: (100vw/@total-width) * 40;
+  background-color: white;
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear:both;
+}
+
+input{
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+// 搜索框
+
+.in-search{
+  width: 100%;
+  height: 5rem;
+  float: left;
+  position: relative;
+  line-height: 5rem;
+  .into-search{
+    width: 90%;
+    height: 2rem;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    background: whitesmoke;
+    line-height: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1rem;
+    margin: auto 0;
+    i{
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background:url("../img/icons.png") no-repeat;
+      background-position: 0px -337px;
+      margin: 0 8px;
+      margin-right: 0;
+      
+    }
+
+    .inp{
+      width: 10rem;
+      border: 0;
+      outline: none;
+      font-size: 14px;
+      margin-left: 30px ;
+      background: whitesmoke;
+    }
+    
+    .btn{
+      width: 3rem;
+      height: 2rem;
+      background-image: linear-gradient(
+        to left bottom,
+        pink,
+        rgb(230, 118, 137)
+      );
+      border: none;
+      padding: 0;
+      font-size: 14px;
+      position: absolute;
+      outline: none;
+      color: white;
+      right: -1px;
+    }
+  }
+
+}
+
+
+// *****************************
+.like-Infos{
+  // background: yellow;
+  .font-spans{
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+
+  .books-Infos{
+    background-image: linear-gradient(
+      to top right ,
+      rgba(255,255,255,0.5),
+      rgba(255, 192, 203, 0.473)
+    );
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 3px;
+
+    .more-Infos{
+      font-size: 0.8rem;
+      padding-left: 4rem;
+      color: red;
+      cursor: pointer;
+    }
+    li{
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      color: rgb(128, 120, 120);
+      font-weight: 650;
+      margin-top: 20px;
+      
+      a{
+        color: black;
+        font-size: 0.9rem;
+        span{
+          font-size: 0.6rem;
+          color: white;
+          font-weight: normal;
+          border-radius: 3px;
+        }
+        .infos-bao{
+          background: linear-gradient(
+            to top right,
+            red,
+            rgb(224, 151, 15)
+          );
+        }
+        .infos-new{
+          background: linear-gradient(
+            to top right,
+            rgb(240, 12, 12),
+            rgb(212, 9, 212)
+          );
+        }
+        .infos-hot{
+          background: linear-gradient(
+            to top right,
+            red,
+            yellow
+          );
+        }
+      }
+    }
+  }
+}
+
+
+

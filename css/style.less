@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+// 定义一个变量,意为设计图的宽度
+@total-width : 750px;
+// 定义一个类用于容器居中
+.w{
+    width: (693/40rem);
+    margin: 0 auto;
+}
+html{
+    // 新版本的 less 除法必须用括号括起来，该句意为 在750px的设计图下，定义100px在750px中的一个比例，后扩大40倍
+    // 由于浏览器的font-size最小只能为12px,所以需要扩大倍数
+    font-size: (100vw/@total-width) * 40;
+    background-color: #eff0f4;
+}
+
+// 去除a 的下划线
+a{
+    text-decoration: none;
+}
+
+//设置头部header
+// 将.w类中的内容添加进(扩展)进。top-bar类中
+.top-bar:extend(.w){
+    // 开启弹性容器
+    display: flex;
+    height: (175/40rem);
+    line-height: (175/40rem);
+    // 设置对齐方式
+    justify-content: space-between;
+    // 设置垂直居中(辅轴的对齐方式)
+    align-items: center;
+
+    a{
+        color: #24253d;
+        font-size: (50.8/40rem);
+        i{
+            color: #999999;
+            display: block;
+            width: (48/40rem);
+            height: (36/40rem);
+        }
+    }
+}
+
+// 设置banner
+.banner:extend(.w){
+    img{
+        width: 100%;
+        border-radius: (9/40rem);
+    }
+}
+
+// 设置菜单四个 
+.menu:extend(.w){
+    height: (329/40rem);
+    display: flex;
+    // 设置换行,自左向右，沿着辅轴换行
+    flex-flow: row wrap;
+    // 设置对齐的方式
+    justify-content: space-between;
+    // 设置辅轴方向的对齐
+    align-content: space-evenly;
+    font-size: (30.48/40rem);
+    a{
+        width: (327/40rem);
+        height: (104/40rem);
+        color: #fff;
+        border-radius: (10/40rem);
+        line-height: (104/40rem);
+        i{
+            margin: 0 (28/40rem) 0 (38/40rem);
+        }
+    }
+    .course{
+        background-color: #f97053; 
+    }
+    .star{
+        background-color: #cd6efe; 
+    }
+    .sub{
+        background-color: #ff3971; 
+    }
+    .download{
+        background-color: #1bc4fb; 
+    }
+}
+
+
+
+// 设置课程列表
+.course-list:extend(.w){
+    height:(394/40rem);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-bottom: (46/40rem);
+    
+    .title{
+        display: flex;
+        // 主轴的空间
+        justify-content: space-between;
+        // 辅轴的对齐方式
+        align-items: center;
+    }
+
+    h2{
+        font-size: (33.02/40rem);
+        color: #24253d;
+        border-left: 2px solid #3a84ff;
+        padding-left: (4/40rem);
+    }
+    a{
+        color: #656565;
+        font-size: (28.38/40rem);
+    }
+}
+
+.items-list{
+    display: flex;
+    width: (720/40rem);
+    // 当课程项目设置多个的时候，滚动课程项目会使整个页面滚动，设置overflow:auto 让该下列表自己创建滚动条滚动
+    overflow-x: auto;
+}
+
+// 设置课程的列表项
+.item{
+    // 设置多个课程后，弹性盒会有个缩小属性 flex-grow;致使整个框变小，设置flex:none使其不变
+    flex: none;
+    box-sizing: border-box;
+    width: (320/40rem);
+    height:(324/40rem);
+    padding: 0 (22/40rem);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    border-radius: 5px;
+    display: flex;
+    // 弹性元素自上而下排列
+    flex-flow: column;
+    // 设置主轴上的空白空间分布
+    justify-content: space-evenly;
+    // 设置课程之间的宽度
+    margin-right: (24/40rem);
+    
+    // 设置图片宽度
+    img{
+        width: 100%;
+        vertical-align: top;
+    }
+    // 课程标题
+    .course-title{
+        font-size: (28/40rem);
+        color: #24253d;
+        font-weight: 500;
+        text-align: center;
+    }
+    .user-info{
+        display: flex;
+        align-items:center;
+    }
+
+    // 头像
+    .avatar{
+        width: (42/40rem);
+        height: (42/40rem);
+    }
+    // 用户的昵称
+    .nickname{
+        font-size: (24/40rem);
+        color: #969393;
+        margin-left: (25/40rem);
+    }
+}

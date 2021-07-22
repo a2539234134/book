@@ -142,7 +142,7 @@ a {
   justify-content: space-between;
   margin-bottom: 1.15rem;
 }
-.course-list .title {
+.course-list .title-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
